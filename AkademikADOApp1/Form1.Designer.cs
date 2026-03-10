@@ -51,6 +51,7 @@
             this.btnDisconnected.TabIndex = 1;
             this.btnDisconnected.Text = "Disconneted Database";
             this.btnDisconnected.UseVisualStyleBackColor = true;
+            this.btnDisconnected.Click += new System.EventHandler(this.btnDisconnected_Click);
             // 
             // lblStatus
             // 
@@ -60,7 +61,6 @@
             this.lblStatus.Size = new System.Drawing.Size(44, 16);
             this.lblStatus.TabIndex = 2;
             this.lblStatus.Text = "Status";
-            this.lblStatus.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 

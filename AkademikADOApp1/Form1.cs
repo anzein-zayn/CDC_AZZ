@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace AkademikADOApp1
 {
-    public partial class Form1: Form
+    public partial class Form1 : Form
     {
         string connString =
             "Data Source=DESKTOP-V6AL6JT\\ZAKYZEIN;Initial Catalog=DBAkademikADO;Integrated Security=True";
@@ -29,9 +29,33 @@ namespace AkademikADOApp1
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnDisconnected_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (conn != null && conn.State == System.Data.ConnectionState.Open)
+                {
+                    // Memutus koneksi ke database
+                    conn.Close();
 
+                    // Memperbarui status pada label
+                    lblStatus.Text = "Status : Database Disconnected";
+
+                    // Menampilkan pesan sukses
+                    MessageBox.Show("Koneksi tidak bisa terhubung");
+                }
+                else
+                {
+                    MessageBox.Show("Database memang belum terhubung.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Menampilkan pesan jika terjadi error saat memutus koneksi
+                MessageBox.Show("Gagal memutus koneksi: " + ex.Message);
+            }
         }
     }
 }
+
+
