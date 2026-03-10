@@ -31,6 +31,7 @@ namespace AkademikADOApp1
 
         private void btnDisconnected_Click(object sender, EventArgs e)
         {
+
             try
             {
                 if (conn != null && conn.State == System.Data.ConnectionState.Open)
@@ -57,5 +58,5 @@ namespace AkademikADOApp1
         }
     }
 }
-
+      
 
