@@ -16,5 +16,10 @@ namespace AkademikADOApp1
         {
             InitializeComponent();
         }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
