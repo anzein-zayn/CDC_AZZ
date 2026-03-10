@@ -12,7 +12,8 @@ namespace AkademikADOApp1
         {
             InitializeComponent();
         }
-
+        //Object SqlConnection
+        SqlConnection conn;
         private void btnConnect_Click(object sender, EventArgs e)
         {
             try
