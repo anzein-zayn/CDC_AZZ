@@ -20,7 +20,7 @@ namespace AkademikADOApp1
             {
                 conn = new SqlConnection(connString);
                 conn.Open();
-                lblStatus.Text = "Status: Database Connected";
+                lblStatus.Text = "Status: Berhasil TerConnect Capt";
                 MessageBox.Show("Koneksi ke Database Berhasil!");
             }
             catch (Exception ex)
