@@ -15,7 +15,17 @@ namespace AkademikADOApp1
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                conn = new SqlConnection(connString);
+                conn.Open();
+                lblStatus.Text = "Status: Database Connected";
+                MessageBox.Show("Koneksi ke Database Berhasil!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Koneksi Gagal : " + ex.Message);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
